@@ -24,7 +24,6 @@ void c_write_out(int size)
 		switch(video_mem[i])
 		{
 			case '\n':
-				video_mem_cur[i] = ;
 			case '\t':
 			default:
 				break;
@@ -39,7 +38,7 @@ void c_main(void)
 {
 	int bytes, height = 0, width = 0;
 	video_mem_cur = (char *)0xb8000;
-	bytes = cprintf("deneme %d-%d-%d\n",1,2,3);
-	bytes = cprintf("is it working? : %s\n","Yes");
+	bytes = c_printf("deneme %d-%d-%d\n",1,2,3);
+	bytes = c_printf("is it working? : %s\n","Yes");
 	c_clear();
 }
